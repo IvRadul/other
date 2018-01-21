@@ -1,0 +1,17 @@
+var 
+gruppa,k,i,c:integer; 
+Str:string; 
+begin 
+write('Введите строку:');readln(str); 
+gruppa:=0; 
+c:=0; 
+k:=0; 
+for i:=1 to length(str) do 
+begin 
+if (str[i]=' ')or (str[i] in ['0'..'9']) then gruppa:=gruppa+1; 
+if (str[i] in ['0'..'9']) then c:=c+1; 
+if str[i]='f' then k:=k+1; 
+if (gruppa=3) or (c=4) then break; 
+end; 
+writeln('Число вхождений символа f в первые 3 группы = ',k); 
+end.
